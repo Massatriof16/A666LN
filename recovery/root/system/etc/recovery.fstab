@@ -1,0 +1,10 @@
+system                                     		/system                erofs                ro wait,slotselect,logical
+system_ext                                     		/system_ext                erofs                ro wait,slotselect,logical
+vendor                                     		/vendor                erofs                ro wait,slotselect,logical
+product                                    		/product               erofs                ro wait,slotselect,logical
+vendor_dlkm                                   /vendor_dlkm           erofs                ro wait,slotselect,logical
+
+/dev/block/by-name/userdata /data f2fs noatime,nosuid,nodev,discard,reserve_root=32768,resgid=1065,inline_xattr,inline_data,inlinecrypt,fsync_mode=nobarrier,compress_cache,compress_algorithm=lz4,compress_log_size=2,compress_extension=apk,compress_extension=so,compress_mode=fs latemount,wait,check,fileencryption=aes-256-xts:aes-256-cts:v2+inlinecrypt_optimized,keydirectory=/metadata/vold/metadata_encryption,reservedsize=128M,checkpoint=fs,formattable,fscompress
+/dev/block/by-name/boot /boot emmc defaults slotselect
+/dev/block/by-name/persist /persist emmc defaults defaults
+/dev/block/by-name/misc             /misc                  emmc                defaults                                     defaults
