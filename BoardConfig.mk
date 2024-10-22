@@ -92,7 +92,7 @@ TARGET_COPY_OUT_VENDOR := vendor
 BOARD_VENDOR_BOOTIMAGE_PARTITION_SIZE := $(BOARD_BOOTIMAGE_PARTITION_SIZE)
 BOARD_SUPER_PARTITION_SIZE := 9126805504 # TODO: Fix hardcoded value
 BOARD_SUPER_PARTITION_GROUPS := itel_dynamic_partitions
-BOARD_ITEL_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext product vendor
+BOARD_ITEL_DYNAMIC_PARTITIONS_PARTITION_LIST := system system_ext product vendor vendor_dlkm odm
 BOARD_ITEL_DYNAMIC_PARTITIONS_SIZE := 9122611200 # TODO: Fix hardcoded value
 # https://source.android.com/devices/bootloader/partitions/generic-boot#combinations, "Launch device without recovery partition":
 TARGET_USERIMAGES_USE_EXT4 := true
@@ -102,7 +102,7 @@ TARGET_RECOVERY_PIXEL_FORMAT := RGBX_8888
 
 # Verified Boot
 BOARD_AVB_ENABLE := true
-BOARD_AVB_VBMETA_SYSTEM := system system_ext product vendor
+BOARD_AVB_VBMETA_SYSTEM := system system_ext product vendor vendor_dlkm odm
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --set_hashtree_disabled_flag
 BOARD_AVB_MAKE_VBMETA_IMAGE_ARGS += --flags 4
 BOARD_AVB_BOOT_KEY_PATH := external/avb/test/data/testkey_rsa4096.pem
