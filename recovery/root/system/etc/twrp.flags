@@ -22,7 +22,7 @@
 
 /misc emmc /dev/block/by-name/misc  
 
-/persist emmc /dev/block/by-name/persist flags=display="Persist";
+/persist emmc /dev/block/by-name/persist flags=display="Persist";flashimg
 /logo emmc /dev/block/by-name/logo flags=display="logo";
 /fbootlogo emmc /dev/block/by-name/fbootlogo flags=display="fbootlogo"
 /tranfs ext4 /dev/block/by-name/tranfs flags=display="tranfs"
@@ -44,7 +44,9 @@
 /vendor_dlkm_b            emmc      /dev/block/mapper/vendor_dlkm_b                           flags=display="Vendor_DLKM B";flashimg=1;backup=1
 
 
-
+/super                    emmc         /dev/block/by-name/super                  flags=display="Super";flashimg
+/userdata                 emmc       /dev/block/by-name/userdata                 flags=display="Userdata default";flashimg
+/userdata                 emmc       /dev/block/mapper/userdata                 flags=display="Userdata default";flashimg
 
 
 
