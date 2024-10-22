@@ -46,8 +46,7 @@
 
 /super                    emmc         /dev/block/by-name/super                  flags=display="Super";flashimg
 /userdata                 emmc       /dev/block/by-name/userdata                 flags=display="Userdata default";flashimg
-/userdata                 emmc       /dev/block/mapper/userdata                 flags=display="Userdata default";flashimg
-
+/userdata                 emmc       /dev/block/mapper/userdata                 flags=display="Userdata Mapper";flashimg
 
 
 # Dynamic Partitions ( A Slots )
